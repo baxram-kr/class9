@@ -1,0 +1,500 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Rubik', sans-serif;
+}
+$mainColor: rgba(122, 199, 81, 1);
+$blackColor:#555;
+$grayColor:rgba(117, 117, 117, 0.71);
+@mixin btn(){
+    padding: 5px 10px;
+    border: none;
+    background-color: $mainColor;
+    color: white;
+    border: 1px solid $mainColor;    
+    cursor: pointer;
+    border-radius: 5px;
+    &:hover{
+        border: 1px solid $mainColor;
+        color: black;
+        background-color: transparent;
+    }
+}
+.lang{
+    @media (max-width:1000px) {
+        display: none;
+     }
+    background-color: $mainColor;
+    padding: 10px;
+    .sol{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        align-items: center;
+        .ddd{
+            a{
+                padding: 5px 10px ;
+                margin: 0 5px;
+                color: white;
+            }
+        }
+    }
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+    @media (max-width:1000px) {
+        max-width: 500px;
+    }
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    align-items: center;
+    .logo{
+        width: 140px;
+        img{
+            width: 100%;
+        }
+    }
+    form{
+        width: 40%;
+        display: flex;
+        background-color: $mainColor;
+        align-items: center;
+        border-radius: 10px;
+        padding: 5px;
+        @media (max-width:1000px) {
+           display: none;
+        }
+        input{
+            width: 70%;
+            padding: 10px;
+            border: none;
+            border-right: 1px solid black;
+            border-radius:5px 0 0 5px;
+
+        }
+        select{
+            padding: 9px;
+            border: none;
+            border-radius:0 5px 5px 0;
+            cursor: pointer;
+        }
+        p{
+            width: 10%;
+            text-align: center;
+            padding: 10px;
+            color: white;
+            cursor: pointer;
+        }
+    }
+    .icons{
+        ul{
+            display: flex;
+            gap: 5px;
+            a{
+                padding: 5px 10px;
+                color: $blackColor;
+            }
+        }
+    }
+}
+.nav__bottom{
+    @media (max-width:1000px) {
+        display: none;
+     }
+    background-color: #F7F8FA;
+    padding: 20px 0;
+    ul{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        a{
+            padding: 20px 30px;
+            color: $blackColor;
+            font-size: 20px;
+            &:hover{
+                background-color: $mainColor;
+                color: white;
+            }
+        }
+        #myBtn{
+            padding: 20px 30px;
+            color: $blackColor;
+            font-size: 20px;
+            background-color: transparent;
+            border: none;
+            &:hover{
+                background-color: $mainColor;
+                color: white;
+            }
+        }
+    }
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    #content{
+        width: 230px;
+        background: #E3E3E3;
+        position: relative;
+        @media (max-width:1000px) {
+            position: absolute;
+            z-index: 2;
+            display: none;
+        }
+        top: 0px;
+        transition: 1s;
+      
+        
+        ul{
+            li{
+                padding: 12px 5px;
+                border-bottom: 1px solid #555;
+                a{
+                    color: #555;
+                    padding: 5px;
+                }
+            }
+        }
+    }
+    .shep{
+        @media (max-width:1000px) {
+           width: 100%;
+           flex-wrap: wrap;
+        }
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+
+        padding: 20px;
+        border-radius: 1px;
+        background: linear-gradient(103deg, rgba(241, 250, 255, 0.88) 0.89%, #F1FAFF 101.61%);
+        backdrop-filter: blur(77.5px);
+        .suw{
+            width: 50%;
+            align-items: center;
+        
+            #bir{
+                width: 200px;
+                
+                object-fit: cover;
+            }
+            display: flex;
+        
+            @media (max-width:1000px) {
+                width: 100%;
+               
+               justify-content: space-evenly;
+             }
+           
+        }
+        .text{ 
+            @media (max-width:1000px) {
+            width: 100%;
+         }
+         
+            padding: 30px 20px;
+            h1{
+                margin: 30px 0;
+            }
+            button{
+                @include btn();
+
+            }
+        }
+    }
+}
+.four__card{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 40px 0;
+    padding: 30px 0;
+    .item{
+        width: 200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        .photo{
+            width: 30%;
+            img{
+                width: 100%;
+            }
+        }
+        .text{
+            width: 65%;
+            p{
+                color: $grayColor;
+            }
+            h4{
+                color: $blackColor;
+            }
+        }
+    }
+}
+.ush__card{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    margin: 50px 0;
+    .box__on{
+        @media (max-width:1000px) {
+           width: 100%;
+           margin-bottom: 40px;
+           height: 250px;
+         }
+        width: 55%;
+        padding: 20px ;
+        height: 500px;
+        background-image: url(/assets/media/Rectangle\ 35.png);     
+    }
+    .box__shep{
+        width: 43%;
+        @media (max-width:1000px) {
+            width: 100%;
+          }
+        
+        .bir__item{
+            padding: 20px;
+            object-fit: contain;
+        
+            margin-bottom: 10px;
+            height: 245px;
+            background-image: url(/assets/media/Rectangle\ 33.png);
+        }
+    }
+}
+.title_t{
+    text-align: center;
+    margin: 30px 0;
+    h1{
+        margin: 30px;
+    }
+    ul{
+        display: flex;
+        justify-content: space-between;
+        font-size: 20px;
+        color: #555;
+        gap: 10px;
+        margin: 0 auto;      
+        width: 500px;
+        @media (max-width:1000px) {
+          display: none;
+         }
+        
+        a{
+            color: #555;
+            &:hover{
+                color: $mainColor;
+            }
+        }
+    }
+}
+.big__card{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .card__items{
+        width: 270px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        
+        .photo{
+            position: relative;
+            p{
+                position: absolute;
+                z-index: 1;
+                padding: 3px;
+                background: #00B7F1;
+                color: #fff;
+                border-radius:0 0  5px 0;
+            }
+            #men{
+                position: absolute;
+                z-index: 2;
+                right: 0;
+                padding: 3px;
+                background: #7AC751;
+                color: #fff;
+                border-radius: 0 0 0  5px;
+
+            }
+            img{
+                width: 100%;
+            }
+        }
+        .text{
+            padding: 10px;
+            p,h3{
+                margin-bottom: 10px;
+            }
+            .juldiz{
+                display: flex;
+                justify-content: space-between;
+                ul{
+                    display: flex;
+                    gap: 10px;
+                    a{
+                        color: $mainColor;
+                    }
+                }
+            }
+        }
+    
+    }
+}
+.two__card{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 50px 0;
+    .item{
+        background-image: url(/assets/media/Rectangle\ 43.png);
+        width: 48%;
+        @media (max-width:1000px) {
+            width: 100%;
+         }
+        height: 250px;
+        padding: 20px;
+        p{
+            width: 50%;
+            @media (max-width:1000px) {
+                width: 100%;
+             }
+        }
+    }
+}
+.one{
+    text-align: center;
+    width: 70%;
+    margin: 50px auto;
+    padding: 30px;
+    padding-top: 0;
+    @media (max-width:1000px) {
+        width: 100%;
+        padding: 10px;
+     }
+  
+border-radius: 8px;
+background: #F8FAFB;
+box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.05);
+p{
+    margin: 20px;
+}
+img{
+    position: relative;
+    top: -30px;
+}
+}
+.tort__card{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .b__item{
+        width: 46%;
+        @media (max-width:1000px) {
+         width: 100%;
+         }
+        margin-bottom: 20px;
+        border-radius: 10px;
+        padding: 20px;
+        background-image: url(/assets/media/Card.png);
+       
+        height: 420px;
+        color: #fff;
+        a{
+            color: white;
+            &:hover{
+                color: $mainColor;
+            }
+        }
+        h1 ,h3{
+            margin: 10px 0;
+        }
+        
+    }
+}
+
+
+footer{
+    background-color: #fff;
+    padding: 40px;
+    a{
+       color: #3A68B8;
+    }
+    p{
+        color: $blackColor;
+        opacity: 0.6;
+    }
+    .f-box{
+        display: flex;
+        justify-content: space-around;
+        width: 85%;
+        margin: 0 auto;
+        #st{
+            display: flex;
+            margin-top: 15px;
+            li a{
+                padding: 10px;
+            }
+        }
+        @media (max-width:1038px){flex-wrap: wrap;}
+        .foot{
+            width: 19%;
+            
+            @media (max-width:1038px){ 
+                width: 100%;
+               margin: 0 auto; 
+               text-align: center;
+}
+           p{
+            font-size: 12px;
+           }
+           ul li {
+            padding: 5px 0;
+           }
+           ul li h3{
+            margin-bottom: 10px;
+            color: $blackColor;
+           }
+           ul li a{
+            margin: 5px 0;
+            color: $blackColor;
+            opacity: 0.6;
+            font-size: 13px;
+            &:hover{
+                opacity: 1;
+            }
+           }
+        }
+    }
+}
+.kel{
+display: flex;
+justify-content: space-between;
+background: #fff;
+padding: 10px 70px;
+@media (max-width:1038px){flex-wrap: wrap;}
+p{
+    font-size: 12px;
+}
+a{
+    color: black;
+    font-size: 12px;
+
+}
+}
